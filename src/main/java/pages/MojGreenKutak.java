@@ -7,8 +7,8 @@ import java.time.Duration;
 
 public class MojGreenKutak extends BasePage{
 
-    public By usernameField = By.xpath("//*[text()=\"Green ID\"]");
-    public By passwordField = By.xpath("//*[text()=\"Lozinka\"]");
+    public By usernameField = By.xpath("//*[@id=\"username\"]");
+    public By passwordField = By.xpath("//*[@id=\"password\"]");
     public By prijavaButton = By.id("login-submit");
 
 
@@ -21,8 +21,8 @@ public class MojGreenKutak extends BasePage{
     }
 
     public void logovanje (String username, String password){
-        type(usernameField, username);
-        type(passwordField,password);
+        driver.findElement(usernameField).sendKeys(username);
+        driver.findElement(passwordField).sendKeys(password);
         driver.findElement(prijavaButton).click();
     }
 

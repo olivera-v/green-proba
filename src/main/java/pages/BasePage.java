@@ -4,11 +4,9 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Set;
 
 public class BasePage {
     protected WebDriver driver;
@@ -63,7 +61,7 @@ public class BasePage {
         driver.switchTo().frame(waitForVisible(locator));
     }
 
-    public void switchToNewlyOpenedTab (WebDriver driver) {
+    public void switchToNewlyOpenedTab () {
         String originalTab = driver.getWindowHandle();
 
         // Čekamo dok se ne pojavi više od 1 taba
