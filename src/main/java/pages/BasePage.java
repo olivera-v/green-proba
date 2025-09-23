@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Set;
 
 public class BasePage {
     protected WebDriver driver;
@@ -50,7 +51,13 @@ public class BasePage {
         el.clear();
         el.sendKeys(text);
     }
-
+    //     Unos teksta sa potvrdom
+    public void typeAndClick(By locator, String text) {
+        WebElement el = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        el.clear();
+        el.sendKeys(text);
+        el.submit();
+    }
     // ---- Frames & Windows ----
     public void switchToFrame(By locator) {
         driver.switchTo().frame(waitForVisible(locator));
@@ -71,6 +78,7 @@ public class BasePage {
             }
         }
     }
+
 
 
 }
