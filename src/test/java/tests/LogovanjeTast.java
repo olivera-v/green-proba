@@ -1,8 +1,10 @@
 package tests;
 
+import com.github.javafaker.Faker;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import pages.BasePage;
 import pages.HomePage;
 import pages.MojGreenKutak;
 //import pages.MojGreenKutak;
@@ -16,7 +18,6 @@ public class LogovanjeTast extends BaseTest{
 
 
 
-    // Kako da se prebacim na drugi Tab?
 
     @Test
     public void neuspesnoLogovanje(){
