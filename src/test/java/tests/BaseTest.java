@@ -21,7 +21,7 @@ public class BaseTest {
 
     @BeforeClass
     public static void beforeAll() {
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
 //        max time to wait for a page load
