@@ -16,7 +16,7 @@ public class LogovanjeTast extends BaseTest{
 
 
 
-    // Kako da se prebacim na drugi Tab?
+    
 
     @Test
     public void neuspesnoLogovanje(){
@@ -25,6 +25,7 @@ public class LogovanjeTast extends BaseTest{
         mojGreenKutak.logovanje("nesto","nesto");
         Assert.assertTrue(driver.findElement(By.id("login-submit")).isDisplayed());
 
+        System.out.println("pokusaj");
 
     }
 
