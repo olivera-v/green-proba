@@ -11,7 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.BasePage;
+
 
 import java.time.Duration;
 
@@ -21,7 +21,7 @@ public class BaseTest {
 
     @BeforeClass
     public static void beforeAll() {
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
 //        max time to wait for a page load
