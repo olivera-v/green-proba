@@ -24,9 +24,6 @@ public class LogovanjeTast extends BaseTest{
         homePage.switchToNewlyOpenedTab();
         mojGreenKutak.logovanje("nesto","nesto");
         Assert.assertTrue(driver.findElement(By.id("login-submit")).isDisplayed());
-
-        System.out.println("pokusaj");
-
     }
 
 

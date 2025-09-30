@@ -21,11 +21,11 @@ public class BaseTest {
 
     @BeforeClass
     public static void beforeAll() {
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 //        max time to wait for a page load
-        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(20));
 //        max time for asynchronous JS run
     }
 

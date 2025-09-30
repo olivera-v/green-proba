@@ -19,5 +19,16 @@ public class SearchTest extends BaseTest{
         homePage.setLinkZaPretragu();
         searchPage.pretragaPojma("losion");
         Assert.assertTrue(driver.findElement(By.xpath("//a[contains(text(),'Losion')]")).isDisplayed());
+        System.out.println("Test je uspesno pretrazio pojam Losion.");
     }
+
+    @Test
+    public void kontrolniPretragaLosiona() throws InterruptedException {
+        homePage.setLinkZaPretragu();
+        searchPage.pretragaPojma("lonsion");
+        System.out.println("Test treba da padne.");
+        Assert.assertTrue(driver.findElement(By.xpath("//a[contains(text(),'Losion')]")).isDisplayed());
+
+    }
+
 }

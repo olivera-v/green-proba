@@ -17,10 +17,35 @@ public class SurfTest extends BaseTest{
 
 
     @Test
-    public void surf() {
+    public void surfLosion() {
         homePage.setLinkZaProizvode();
         proizvodiPage.pregledProizvodaGreenSunCare();
         sunCareProizvodiPage.pregledProizvodaLosionPosleSuncanja();
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()=\"Losion posle sunčanja\"]")).isDisplayed());
     }
+
+    @Test
+    public void surfSPF15() {
+            homePage.setLinkZaProizvode();
+            proizvodiPage.pregledProizvodaGreenSunCare();
+            sunCareProizvodiPage.pregledProizvodaMlekoSPF15();
+            Assert.assertTrue(driver.findElement(By.xpath("//h1[text()=\"Mleko za sunčanje SPF 15\"]")).isDisplayed());
+    }
+
+    @Test
+    public void surfSPF30() {
+        homePage.setLinkZaProizvode();
+        proizvodiPage.pregledProizvodaGreenSunCare();
+        sunCareProizvodiPage.pregledProizvodaMlekoSPF30();
+        Assert.assertTrue(driver.findElement(By.xpath("//h1[text()=\"Mleko za sunčanje SPF 30\"]")).isDisplayed());
+    }
+
+    @Test
+    public void kontrolniSurfSPF30() {
+        homePage.setLinkZaProizvode();
+        proizvodiPage.pregledProizvodaGreenSunCare();
+        sunCareProizvodiPage.pregledProizvodaMlekoSPF30();
+        Assert.assertTrue(driver.findElement(By.xpath("//h1[text()=\"Mleko za sunčanje SPF 15\"]")).isDisplayed());
+    }
 }
+
